@@ -1,5 +1,10 @@
 <h1>プロフィール</h1>
 <h3>メールアドレス</h3>
+<p>
+  <% if @user.avatar.attached? %>
+    <%= image_tag @user.avatar %>
+  <% end %>
+</p>
 <%= @user.email %>
 <h3>名前</h3>
 <%= @user.name %>
